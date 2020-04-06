@@ -1,0 +1,6 @@
+.site-layout {
+  min-height: calc(100vh - 134px);
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
