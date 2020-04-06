@@ -61,7 +61,7 @@ export default class todoList extends Component {
                 <Button type="primary" icon={<PlusOutlined />} onClick={this.showModal}>添加代办任务</Button>
               </Col>
             </Row>
-          }
+          } 
           footer={<div>Footer</div>} 
           bordered
           dataSource={todoList}
