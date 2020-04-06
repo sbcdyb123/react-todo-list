@@ -194,14 +194,14 @@ ReactDOM.render(<Reftest/> , document.getElementById('root'))
 
 ### 组件
 
-```html
-<BrowserRouter> 
-<HashRouter> 
-<Route> 
-<Redirect> 
-<Link> 
-<NavLink> 
-<Switch>
+```
+BrowserRouter
+HashRouter>
+Route
+Redirect
+Link
+NavLink
+Switch
 ```
 
 ```javascript
