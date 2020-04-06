@@ -1,17 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
 # React笔记
 
 ## 事件处理
@@ -26,7 +12,7 @@ You will also see any lint errors in the console.
 
 案例一==>class fields：
 
-```react
+```javascript
 class LoggingButton extends React.Component {
   // 此语法确保 `handleClick` 内的 `this` 已被绑定。
   // 注意: 这是 *实验性* 语法。
@@ -46,7 +32,7 @@ class LoggingButton extends React.Component {
 
 案例二==>回调中使用[箭头函数](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ：
 
-```react
+```javascript
 class LoggingButton extends React.Component {
   handleClick() {
     console.log('this is:', this);
@@ -69,7 +55,7 @@ class LoggingButton extends React.Component {
 
 案例三==>构造器中绑定 ：
 
-```react
+```javascript
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -108,7 +94,7 @@ ReactDOM.render(
 
 在循环中，通常我们会为事件处理函数传递额外的参数。例如，若 `id` 是你要删除那一行的 ID，以下两种方式都可以向事件处理函数传递参数：
 
-```react
+```javascript
 <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
 ```
@@ -125,7 +111,7 @@ ReactDOM.render(
 
 ref的三种方式：
 
-```react
+```javascript
 //官方文档版
 class Reftest extends React.Component{
   constructor(props){
@@ -149,7 +135,7 @@ class Reftest extends React.Component{
 ReactDOM.render(<Reftest/> , document.getElementById('root'))
 ```
 
-```react
+```javascript
 //网课版
 class Reftest extends React.Component{
   constructor(props){
@@ -173,7 +159,7 @@ class Reftest extends React.Component{
 ReactDOM.render(<Reftest/> , document.getElementById('root'))
 ```
 
-```react
+```javascript
 //老版本
 class Reftest extends React.Component{
   constructor(props){
@@ -208,15 +194,17 @@ ReactDOM.render(<Reftest/> , document.getElementById('root'))
 
 ### 组件
 
--  <BrowserRouter> 
--  <HashRouter> 
--  <Route> 
--  <Redirect> 
--  <Link> 
--  <NavLink> 
--  <Switch>
+```html
+<BrowserRouter> 
+<HashRouter> 
+<Route> 
+<Redirect> 
+<Link> 
+<NavLink> 
+<Switch>
+```
 
-```react
+```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter, HashRouter} from 'react-router-dom'
@@ -238,7 +226,7 @@ ReactDOM.render(
 )
 ```
 
-```react
+```javascript
 import React from 'react'
 import {Route, Switch, Redirect} from 'react-router-dom'
 import MyNavLink from './my-nav-link'
@@ -300,7 +288,7 @@ npm install react-redux redux --save
 
 chrome应用商店搜索redux 安装插件
 
-```
+```shell
 npm install redux-devtools-extension -S -D 
 ```
 
@@ -349,7 +337,7 @@ export default createStore(
 
 #### reducers.JS
 
-```js
+```javascript
 import {combineReducers} from 'redux'
 import {ADD_TODO_LIST,REMOVE_TODO_LIST,ADD_REMOVE_LIST} from './action-types'
 
@@ -421,7 +409,7 @@ export const ADD_REMOVE_LIST = 'ADD_REMOVE_LIST'
 
 #### index.js
 
-```react
+```javascript
 import React from 'react'
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom'
